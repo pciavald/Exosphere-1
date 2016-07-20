@@ -20,5 +20,4 @@ var code = compiled.Greeter.code;
 
 // Deploy to blockchain and access via greeter proxy object
 var infoContract = web3.eth.contract(abi); 
-var greeter = infoContract.new({from: web3.eth.accounts[0], data:code, gas:1000000});
-
+var greeter = infoContract.new("params1", "params2", "...", {from: web3.eth.accounts[0], data: code, gas: 1000000});
